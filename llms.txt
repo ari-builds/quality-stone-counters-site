@@ -1,10 +1,11 @@
 # Quality Stone Counters Corp
-Custom cabinets, quartz and granite countertops, kitchen and bathroom remodels across the Triad, North Carolina. Owner-led, fixed quotes, in-house fabrication, lifetime installation warranty.
+Custom cabinets, tile and LVP flooring, quartz and granite countertops, kitchen and bathroom remodels across the Triad, North Carolina. Owner-led, fixed quotes, in-house fabrication, lifetime installation warranty.
 
 ## Pages
 - Home: https://ari-builds.github.io/quality-stone-counters-site/
 - Services: https://ari-builds.github.io/quality-stone-counters-site/services/
 - Custom Cabinets: https://ari-builds.github.io/quality-stone-counters-site/services/custom-cabinets/
+- Tile and LVP Flooring: https://ari-builds.github.io/quality-stone-counters-site/services/flooring/
 - Quartz Countertops: https://ari-builds.github.io/quality-stone-counters-site/services/quartz-countertops/
 - Granite Countertops: https://ari-builds.github.io/quality-stone-counters-site/services/granite-countertops/
 - Kitchen Remodeling: https://ari-builds.github.io/quality-stone-counters-site/services/kitchen-remodeling/

@@ -159,7 +159,7 @@ p{max-width:60ch}
 .hero__h{
   font-size:clamp(2.7rem,7.2vw,5.6rem);
   line-height:.99;font-weight:300;letter-spacing:-.035em;
-  max-width:15ch;color:var(--paper);
+  max-width:26ch;color:var(--paper);
   text-shadow:0 2px 40px rgba(0,0,0,.28);
 }
 .hero__h em{font-style:italic;color:#E7B08B;font-weight:300}
@@ -608,6 +608,8 @@ p{max-width:60ch}
 .svcgrid__card--ask .mono{color:#E2A883}
 .svcgrid__card--ask .svcgrid__meta{color:rgba(251,248,243,.45)}
 .svcgrid__card--ask .svcgrid__go{color:#E2A883;border-top:1px solid rgba(251,248,243,.18);margin-top:10px;padding-top:18px}
+@media(min-width:760px){.svcgrid__card--ask{grid-column:1/-1}}
+@media(min-width:760px){.svcgrid__card--ask .svcgrid__body{max-width:62ch}}
 
 /* ---------- quartz vs granite ---------- */
 .cmp{display:grid;grid-template-columns:1fr;gap:16px}

@@ -209,6 +209,7 @@ function footer(d) {
     <div class="foot__col">
       <h4 class="mono">Services</h4>
       <a href="${url(d, 'services/custom-cabinets/')}">Custom cabinets</a>
+      <a href="${url(d, 'services/flooring/')}">Tile &amp; LVP flooring</a>
       <a href="${url(d, 'services/quartz-countertops/')}">Quartz countertops</a>
       <a href="${url(d, 'services/granite-countertops/')}">Granite countertops</a>
       <a href="${url(d, 'services/kitchen-remodeling/')}">Kitchen remodels</a>
@@ -377,11 +378,60 @@ const SERVICES = [
     related: ['quartz-countertops', 'kitchen-remodeling', 'bathroom-remodeling'],
   },
   {
-    slug: 'quartz-countertops',
+    slug: 'flooring',
     n: '02',
+    title: 'Tile and LVP Flooring',
+    h1: 'Floors that are flat, level<br>and <em>built to stay</em> that way.',
+    kicker: '02 — Floors',
+    desc: 'Porcelain tile and luxury vinyl plank for kitchens, baths, laundry rooms and whole floors. Subfloor prep, level transitions and installation by our own crew.',
+    metaDesc: 'Tile and LVP flooring in Greensboro, Winston-Salem and the Triad. Subfloor levelling, waterproof tile, clean transitions and installation by one owner-led crew.',
+    img: { ...IMG.bathTub, cap: 'Winston-Salem · hex tile floor' },
+    intro: [
+      'A floor is only as good as what is under it. We check flatness, repair soft spots, prime and level before a single tile or plank goes down — because lippage and hollow spots are installation problems, not material problems.',
+      'Tile is set over an uncoupling or waterproof membrane with the correct notch trowel and full coverage. LVP is acclimated, undercut at the walls and laid on a prepared substrate, so the planks lock tight and the transitions sit flush.',
+    ],
+    includedTitle: 'What a Quality Stone floor project includes',
+    included: [
+      ['Subfloor prep', 'Flatness checked, soft spots repaired and the substrate primed before install.'],
+      ['Levelling &amp; slope', 'Self-leveller where needed, and correct slope in wet areas so water goes to the drain.'],
+      ['Waterproofing', 'Membrane in baths, laundry rooms and any floor that sees standing water.'],
+      ['Layout planning', 'Tile centred on the room and planks run with the longest sight line, not wherever the first row lands.'],
+      ['Clean transitions', 'Undercut jambs, flush threshold strips and level changes that do not trip you.'],
+      ['Our own installers', 'The crew that preps the floor is the crew that finishes and seals it.'],
+    ],
+    specTitle: 'Flooring options',
+    specHead: ['Choice', 'Options'],
+    specRows: [
+      ['Tile', 'Porcelain or ceramic, 12x24, 24x48, hex, mosaic'],
+      ['LVP / LVT', 'Glue-down or click, 20 mil wear layer and up'],
+      ['Layout', 'Stacked, offset, herringbone, chevron'],
+      ['Transitions', 'Flush strips, reducers, stair nosing'],
+      ['Lead time', '3–7 days for most rooms'],
+      ['Warranty', 'Lifetime on installation'],
+    ],
+    price: { range: '$6–$18', unit: 'per square foot, installed', note: 'Tile with membrane and levelling sits at the top; click LVP over a sound subfloor sits at the bottom. Prep is quoted up front, not discovered later.' },
+    timeline: '3–7 days',
+    steps: [
+      ['Check', 'We measure, test flatness and look for movement or moisture issues.'],
+      ['Plan', 'Layout, material and transitions agreed, with a fixed quote.'],
+      ['Prep', 'Repairs, levelling, membrane and primer before any finish material.'],
+      ['Lay &amp; finish', 'Tile or plank set, grouted or locked, trimmed and cleaned.'],
+    ],
+    gallery: [IMG.bathTub, IMG.bathMarble, IMG.kitchen],
+    faqs: [
+      ['Do you level the subfloor first?', 'Yes, and it is in the quote. Tile and plank both telegraph what is underneath, so flatness, soft spots and moisture get fixed before installation starts.'],
+      ['Tile or LVP — which should I choose?', 'Tile is the better answer for baths, laundry rooms and anywhere wet. LVP is warmer underfoot, faster to install and often the right call for a whole main floor or a rental.'],
+      ['Can you lay tile over existing tile?', 'Sometimes, if the existing floor is sound, flat and well bonded. We test it first; if there is any doubt we remove it, because a failed bond takes the new floor with it.'],
+      ['Do you do small jobs like a bathroom floor?', 'Yes. A single bath floor, a laundry room or a repaired patch is a normal job for us, and it is usually scheduled alongside a vanity or cabinet project.'],
+    ],
+    related: ['bathroom-remodeling', 'kitchen-remodeling', 'custom-cabinets'],
+  },
+  {
+    slug: 'quartz-countertops',
+    n: '03',
     title: 'Quartz Countertops',
     h1: 'Quartz countertops, templated digitally<br>and cut in <em>our own shop.</em>',
-    kicker: '02 — Engineered stone',
+    kicker: '03 — Engineered stone',
     desc: 'Non-porous quartz for kitchens, baths, laundry rooms and bars. Laser template, in-house fabrication, tight seams and a lifetime installation warranty.',
     metaDesc: 'Quartz countertops in Greensboro, Winston-Salem and the Triad. Digital templating, in-house fabrication, undermount sinks and tight seams. Fixed quotes, lifetime installation warranty.',
     img: { ...IMG.waterfall, cap: 'Winston-Salem · quartz waterfall island' },
@@ -427,10 +477,10 @@ const SERVICES = [
   },
   {
     slug: 'granite-countertops',
-    n: '03',
+    n: '04',
     title: 'Granite Countertops',
     h1: 'Granite slabs chosen with you,<br>before anything is <em>cut.</em>',
-    kicker: '03 — Natural stone',
+    kicker: '04 — Natural stone',
     desc: 'Natural granite with real movement, cut and finished in-house. Slab selection, sealing and installation handled by one crew.',
     metaDesc: 'Granite countertops in the Triad. Slab selection with the owner, in-house fabrication, sealing and installation. Fixed quotes and lifetime installation warranty.',
     img: { ...IMG.island, cap: 'Greensboro · granite & brick' },
@@ -476,10 +526,10 @@ const SERVICES = [
   },
   {
     slug: 'kitchen-remodeling',
-    n: '04',
+    n: '05',
     title: 'Kitchen Remodeling',
     h1: 'One crew, one schedule,<br>one <em>fixed quote</em> for the whole kitchen.',
-    kicker: '04 — Full kitchens',
+    kicker: '05 — Full kitchens',
     desc: 'Layout, cabinets, stone, lighting and installation handled as one project, with one schedule and one point of contact.',
     metaDesc: 'Full kitchen remodeling in Greensboro, Winston-Salem and the Triad. Cabinets, quartz and granite, layout and installation by one owner-led crew. Fixed quotes.',
     img: { ...IMG.kitchen, cap: 'Greensboro · full kitchen' },
@@ -525,10 +575,10 @@ const SERVICES = [
   },
   {
     slug: 'bathroom-remodeling',
-    n: '05',
+    n: '06',
     title: 'Bathroom Remodeling',
     h1: 'Bathrooms finished on time, on budget,<br>and <em>sealed properly.</em>',
-    kicker: '05 — Baths &amp; vanities',
+    kicker: '06 — Baths &amp; vanities',
     desc: 'Vanities, stone tops, shower slabs and full bathroom remodels. Waterproofing done right, because a beautiful bath that leaks is not beautiful.',
     metaDesc: 'Bathroom remodeling and custom vanities in the Triad. Quartz and marble vanity tops, slab showers, waterproofing and installation by one crew.',
     img: { ...IMG.bathTub, cap: 'Winston-Salem · marble bath' },
@@ -766,8 +816,8 @@ ${ctaBand(d, { h: `Ready to price your<br><em>${s.title.toLowerCase()}?</em>`, p
   const body = `
 ${phero(d, {
     kicker: 'Services',
-    h1: 'Five things,<br><em>done properly.</em>',
-    p: 'Cabinets, quartz, granite, kitchens and baths. We keep the list short so the quality stays high — and every job includes design help, a fixed quote and installation by our own crew.',
+    h1: 'Six things,<br><em>done properly.</em>',
+    p: 'Cabinets, floors, quartz, granite, kitchens and baths. We keep the list short so the quality stays high — and every job includes design help, a fixed quote and installation by our own crew.',
     img: { ...IMG.waterfall, cap: 'Winston-Salem · quartz waterfall' },
     meta: { crumb: trail },
   })}
@@ -793,7 +843,7 @@ ${phero(d, {
       </a>`).join('\n      ')}
       <a class="svcgrid__card svcgrid__card--ask" href="${url(d, 'contact/')}">
         <div class="svcgrid__body">
-          <span class="mono">06 — Not sure yet</span>
+          <span class="mono">07 — Not sure yet</span>
           <h3>Start with the room, not the product.</h3>
           <p>Tell us what the space looks like and how you actually use it. We will tell you what it needs — even when that is less than you expected.</p>
           <span class="svcgrid__meta mono">Free in-home measure · no obligation</span>
@@ -860,8 +910,8 @@ ${ctaBand(d)}
   const out = path.join(ROOT, 'services', 'index.html');
   fs.mkdirSync(path.dirname(out), { recursive: true });
   fs.writeFileSync(out, page(d, {
-    title: `Kitchen & Bathroom Services in the Triad | ${S.name}`,
-    desc: 'Custom cabinets, quartz and granite countertops, kitchen and bathroom remodeling across Greensboro, Winston-Salem and the Triad. Fixed quotes, in-house fabrication.',
+    title: `Cabinet, Flooring &amp; Countertop Services in the Triad | ${S.name}`,
+    desc: 'Custom cabinets, tile and LVP flooring, quartz and granite countertops, kitchen and bathroom remodeling across Greensboro, Winston-Salem and the Triad. Fixed quotes, in-house fabrication.',
     canonical: 'services/',
     og: IMG.waterfall.f,
     jsonld,
@@ -1699,7 +1749,7 @@ ${ROUTES.map(([p, priority, freq]) => `  <url>
 fs.writeFileSync(path.join(ROOT, 'sitemap.xml'), sitemap);
 
 const llms = `# ${S.name}
-Custom cabinets, quartz and granite countertops, kitchen and bathroom remodels across the Triad, North Carolina. Owner-led, fixed quotes, in-house fabrication, lifetime installation warranty.
+Custom cabinets, tile and LVP flooring, quartz and granite countertops, kitchen and bathroom remodels across the Triad, North Carolina. Owner-led, fixed quotes, in-house fabrication, lifetime installation warranty.
 
 ## Pages
 - Home: ${ORIGIN}/
