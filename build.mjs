@@ -74,11 +74,12 @@ function stars(cls = '') {
   return `<span class="stars ${cls}" aria-hidden="true">${'<svg class="ico"><use href="#i-star"/></svg>'.repeat(5)}</span>`;
 }
 
-function head(d, { title, desc, canonical, og, jsonld, extra = '' }) {
+function head(d, { title, desc, canonical, og, jsonld, extra = '', base = '' }) {
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+${base ? `<base href="${base}">` : ''}
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>${esc(title)}</title>
 <meta name="description" content="${esc(desc)}">
@@ -1663,6 +1664,7 @@ function formMarkup(d, id = 'form') {
     og: IMG.kitchen.f,
     jsonld,
     extra: '<meta name="robots" content="noindex,follow">',
+    base: '/quality-stone-counters-site/',
   }, body));
   console.log('wrote', '404.html');
 }
