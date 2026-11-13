@@ -1,13 +1,27 @@
 # Quality Stone Counters Corp
-Triad Area custom cabinets, quartz and granite countertops, kitchen and bathroom remodels.
+Custom cabinets, quartz and granite countertops, kitchen and bathroom remodels across the Triad, North Carolina. Owner-led, fixed quotes, in-house fabrication, lifetime installation warranty.
 
-Services: Custom Cabinets, Quartz Countertops, Granite Countertops, Bathroom Remodel, Kitchen Remodel, Installation & Repair, Design Consultation, Free Estimates.
+## Pages
+- Home: https://ari-builds.github.io/quality-stone-counters-site/
+- Services: https://ari-builds.github.io/quality-stone-counters-site/services/
+- Custom Cabinets: https://ari-builds.github.io/quality-stone-counters-site/services/custom-cabinets/
+- Quartz Countertops: https://ari-builds.github.io/quality-stone-counters-site/services/quartz-countertops/
+- Granite Countertops: https://ari-builds.github.io/quality-stone-counters-site/services/granite-countertops/
+- Kitchen Remodeling: https://ari-builds.github.io/quality-stone-counters-site/services/kitchen-remodeling/
+- Bathroom Remodeling: https://ari-builds.github.io/quality-stone-counters-site/services/bathroom-remodeling/
+- Selected work: https://ari-builds.github.io/quality-stone-counters-site/work/
+- Process: https://ari-builds.github.io/quality-stone-counters-site/process/
+- Reviews: https://ari-builds.github.io/quality-stone-counters-site/reviews/
+- FAQ: https://ari-builds.github.io/quality-stone-counters-site/faq/
+- Service area: https://ari-builds.github.io/quality-stone-counters-site/service-area/
+- About: https://ari-builds.github.io/quality-stone-counters-site/about/
+- Contact and free estimate: https://ari-builds.github.io/quality-stone-counters-site/contact/
 
-Owner: Giselle. Phones: (336) 844-0585, (786) 985-9559. Email: info@qualitystonecounter.com
-Service area: Greensboro, Winston-Salem, High Point, Kernersville, Burlington, Triad NC.
+## Facts
+Owner: Giselle. Phone: (336) 844-0585 or (786) 985-9559. Email: info@qualitystonecounter.com
+Service area: Greensboro, Winston-Salem, High Point, Kernersville, Burlington, Clemmons, Thomasville, Oak Ridge, Summerfield, Triad NC.
+Rating: 4.9/5 across 212 Google reviews. Licensed and insured NC #78214. Lifetime installation warranty.
+Hours: Mon-Fri 8:00-5:30, Saturday by appointment.
 
-Process: Free Consultation → Design & Quote → Fabrication → Installation.
-
-Reviews: 4.9/5 across 212 Google reviews. Licensed and insured NC #78214. Lifetime installation warranty.
-
-Contact form at /#contact.
+## Process
+Free in-home measure and fixed quote -> design and slab/door approval -> in-house fabrication -> installation by our own crew -> walkthrough and warranty.

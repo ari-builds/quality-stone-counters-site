@@ -31,7 +31,7 @@
 
   /* ---------- reveal ---------- */
   document.documentElement.classList.add('js');
-  const rv = document.querySelectorAll('.sec .shell > *, .gal__it, .mat__card, .step, .q');
+  const rv = document.querySelectorAll('.sec .shell > *, .gal__it, .mat__card, .step, .q, .inc > li, .steps4 > li, .revcard, .rel__card, .svcgrid__card, .citycard, .timeline > li, .case, .phero__copy > *, .phero__media');
   if ('IntersectionObserver' in window) {
     const io = new IntersectionObserver((entries) => {
       entries.forEach((e) => {
@@ -48,6 +48,20 @@
         if (el.getBoundingClientRect().top < window.innerHeight * 1.2) el.classList.add('on');
       });
     }, 1200);
+    // Fast scrolls and anchor jumps can outrun the observer; catch anything
+    // that has entered or passed the viewport.
+    let ticking = false;
+    const catchUp = () => {
+      ticking = false;
+      document.querySelectorAll('.rv:not(.on)').forEach((el) => {
+        if (el.getBoundingClientRect().top < window.innerHeight * 1.05) el.classList.add('on');
+      });
+    };
+    window.addEventListener('scroll', () => {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(catchUp);
+    }, { passive: true });
   }
 
   /* ---------- counters ---------- */
@@ -113,9 +127,20 @@
     });
   });
 
+  /* keep an open panel sized correctly after a resize or rotation */
+  let rsz;
+  window.addEventListener('resize', () => {
+    clearTimeout(rsz);
+    rsz = setTimeout(() => {
+      document.querySelectorAll('.q.is-open .q__a').forEach((p) => {
+        p.style.maxHeight = p.scrollHeight + 'px';
+      });
+    }, 120);
+  });
+
   /* ---------- form ---------- */
   const form = document.getElementById('form');
-  if (form) {
+  if (form && form.querySelector('.form__ok')) {
     form.addEventListener('submit', (e) => {
       e.preventDefault();
       if (!form.reportValidity()) return;
