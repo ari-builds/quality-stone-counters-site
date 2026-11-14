@@ -31,6 +31,15 @@ const IMG = {
   island: { f: 'IMG_2616.webp', w: 1600, h: 1200, alt: 'White quartz island edge with a brass bridge faucet against brick' },
   faucet: { f: 'IMG_2616-faucet.webp', w: 1200, h: 1452, alt: 'Detail of a quartz edge and brass bridge faucet' },
   sink: { f: 'IMG_2591.webp', w: 880, h: 898, alt: 'Undermount sink cut-out in a quartz countertop' },
+  cabHero: { f: 'cab-hero.webp', w: 1920, h: 2560, alt: 'White shaker kitchen with a custom range hood and pendant lighting' },
+  cab01: { f: 'cab-01.webp', w: 1400, h: 1050, alt: 'White cabinetry with a quartz island and rattan pendants' },
+  cab02: { f: 'cab-02.webp', w: 1170, h: 846, alt: 'White cabinets with a marble-look counter and open shelving' },
+  cab03: { f: 'cab-03.webp', w: 1400, h: 1050, alt: 'Two-tone kitchen with white flat uppers and light wood lowers' },
+  cab04: { f: 'cab-04.webp', w: 1400, h: 1050, alt: 'Cream uppers, wood lowers and a teal island' },
+  cab05: { f: 'cab-05.webp', w: 1400, h: 1050, alt: 'White and grey shaker cabinets around a quartz island' },
+  cab06: { f: 'cab-06.webp', w: 768, h: 1024, alt: 'Marble waterfall island with white cabinetry' },
+  cabShop: { f: 'cab-shop.webp', w: 1400, h: 1050, alt: 'Cabinet showroom with navy flat-panel doors and a stone-look backsplash' },
+  cabShowroom: { f: 'cab-showroom.webp', w: 1200, h: 1510, alt: 'Cabinet showroom wall with white uppers and light wood units' },
 };
 
 const NAV = [
@@ -336,7 +345,7 @@ const SERVICES = [
     kicker: '01 — Cabinetry',
     desc: 'Full-height, semi-custom and fully custom cabinetry for kitchens, baths, pantries and built-ins. Built in our Triad shop, installed by the crew that measured it.',
     metaDesc: 'Custom kitchen, bath and pantry cabinets built in our Triad shop. Plywood boxes, soft-close hardware, painted or stained finishes. Fixed quotes and lifetime installation warranty.',
-    img: { ...IMG.sage, cap: 'Greensboro · sage cabinetry' },
+    img: { ...IMG.cabHero, cap: 'Greensboro · white shaker & custom hood' },
     intro: [
       'Most cabinets you can buy come in a handful of widths. Your kitchen did not. We build to the opening, scribe to the wall and finish the run so the last cabinet is the same size as the first.',
       'You approve a sample door before anything is sprayed, and the drawing you sign is the drawing we build from. No substitution at install, no “close enough” filler panels.',
@@ -368,7 +377,7 @@ const SERVICES = [
       ['Build', 'Doors and boxes are cut, assembled and finished in our shop.'],
       ['Install', 'Our crew sets, scribes, levels and hangs the run in your home.'],
     ],
-    gallery: [IMG.sage, IMG.kitchen, IMG.island],
+    gallery: [IMG.cab02, IMG.cab03, IMG.cab04],
     faqs: [
       ['What is the difference between custom and semi-custom cabinets?', 'Semi-custom cabinets are stock boxes in set increments with a limited choice of fronts. Custom cabinets are built to your exact openings, ceiling height and storage plan, so you get a fitted run instead of filler strips and gaps.'],
       ['Can you match cabinets to an existing kitchen?', 'Usually. We can match a paint or stain from a door sample you already have, and we build a single matching cabinet, a pantry run or a full island rather than replacing everything.'],
@@ -1034,9 +1043,14 @@ ${ctaBand(d, { h: 'Come see the shop,<br><em>or we will come to you.</em>', p: '
   const trail = [['Work', 'work/']];
   const jsonld = { '@context': 'https://schema.org', '@graph': [biz(), crumbs(trail)] };
   const items = [
+    [IMG.cabShowroom, 'cabinets', 'Showroom · Cabinets', 'Door &amp; finish library'],
+    [IMG.cab03, 'cabinets', 'Showroom · Cabinets', 'White uppers, wood lowers'],
+    [IMG.cab04, 'cabinets', 'Showroom · Cabinets', 'Cream, wood &amp; teal island'],
+    [IMG.sage, 'cabinets', 'Greensboro · Cabinetry', 'Sage run, brass hardware'],
     [IMG.kitchen, 'kitchen', 'Greensboro · Kitchen', 'Sage cabinets, quartz island'],
     [IMG.waterfall, 'kitchen', 'Winston-Salem · Kitchen', 'Marble waterfall island'],
-    [IMG.sage, 'cabinets', 'Greensboro · Cabinetry', 'Sage run, brass hardware'],
+    [IMG.cab01, 'kitchen', 'Greensboro · Kitchen', 'White shaker, rattan pendants'],
+    [IMG.cab06, 'kitchen', 'Greensboro · Kitchen', 'Marble waterfall island'],
     [IMG.bathTub, 'bath', 'Winston-Salem · Bath', 'Marble, tub &amp; hex tile'],
     [IMG.bathMarble, 'bath', 'High Point · Bath', 'Floating vanity &amp; shower'],
     [IMG.shower, 'bath', 'Greensboro · Bath', 'Quartz slab shower'],
@@ -1065,10 +1079,10 @@ ${phero(d, {
       </div>
       <div class="chips" role="group" aria-label="Filter work by category">
         <button class="chip is-on" data-f="all" aria-pressed="true">All</button>
+        <button class="chip" data-f="cabinets" aria-pressed="false">Cabinets</button>
         <button class="chip" data-f="kitchen" aria-pressed="false">Kitchens</button>
         <button class="chip" data-f="bath" aria-pressed="false">Baths</button>
         <button class="chip" data-f="stone" aria-pressed="false">Stone</button>
-        <button class="chip" data-f="cabinets" aria-pressed="false">Cabinets</button>
       </div>
     </div>
 
