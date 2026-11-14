@@ -11,12 +11,13 @@ const S = {
   telHref: 'tel:+13368440585',
   tel2: '(786) 985-9559',
   tel2Href: 'tel:+17869859559',
-  email: 'info@qualitystonecounter.com',
+  email: 'qualitystonecounterscorp@gmail.com',
   license: 'NC #78214',
   rating: '4.9',
   reviews: '212',
   hours: 'Mon–Fri 8:00–5:30 · Sat by appointment',
   area: 'Greensboro, Winston-Salem, High Point, Kernersville, Burlington and the surrounding Triad',
+  lang: 'Habla Español',
 };
 
 const IMG = {
@@ -120,7 +121,7 @@ function topbar() {
 <div class="topbar">
   <div class="shell topbar__in">
     <span class="mono">Triad, North Carolina</span>
-    <span class="topbar__mid mono">Owner-led · Fixed quotes · Lifetime installation warranty</span>
+    <span class="topbar__mid mono">Owner-led · Fixed quotes · Lifetime installation warranty · ${S.lang}</span>
     <a href="${S.telHref}" class="topbar__tel mono">${S.tel}</a>
   </div>
 </div>
