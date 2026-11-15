@@ -1411,7 +1411,7 @@ ${phero(d, {
     kicker: 'FAQ',
     h1: 'Straight<br><em>answers.</em>',
     p: 'Pricing, materials, timing and the warranty — the questions people actually ask before they book. If yours is not here, call Giselle. She answers her own phone.',
-    img: { ...IMG.macro, cap: 'Detail · calacatta gold' },
+    img: { ...IMG.island, cap: 'Detail · quartz &amp; brass' },
     meta: { crumb: trail },
   })}
 
@@ -1443,7 +1443,7 @@ ${ctaBand(d, { h: 'Still deciding?<br><em>Ask Giselle.</em>', p: 'One call, no s
     title: `FAQ — Cabinets, Quartz, Granite & Remodeling Questions | ${S.name}`,
     desc: 'Answers on cabinet and countertop pricing, quartz vs granite, remodel timelines, warranties and service areas across the Triad.',
     canonical: 'faq/',
-    og: IMG.macro.f,
+    og: IMG.island.f,
     jsonld,
     active: 'faq',
   }, body));
