@@ -37,7 +37,7 @@ const IMG = {
   cab02: { f: 'cab-02.webp', w: 1170, h: 846, alt: 'White cabinets with a marble-look counter and open shelving' },
   cab03: { f: 'cab-03.webp', w: 1400, h: 1050, alt: 'Two-tone kitchen with white flat uppers and light wood lowers' },
   cab04: { f: 'cab-04.webp', w: 1400, h: 1050, alt: 'Cream uppers, wood lowers and a teal island' },
-  cab05: { f: 'cab-05.webp', w: 1400, h: 1050, alt: 'White and grey shaker cabinets around a quartz island' },
+  cab05: { f: 'cab-05.webp', w: 1400, h: 1050, alt: 'White and gray shaker cabinets around a quartz island' },
   cab06: { f: 'cab-06.webp', w: 768, h: 1024, alt: 'Marble waterfall island with white cabinetry' },
   cabShop: { f: 'cab-shop.webp', w: 1400, h: 1050, alt: 'Cabinet showroom with navy flat-panel doors and a stone-look backsplash' },
   cabShowroom: { f: 'cab-showroom.webp', w: 1200, h: 1510, alt: 'Cabinet showroom wall with white uppers and light wood units' },
@@ -342,7 +342,7 @@ const SERVICES = [
     slug: 'custom-cabinets',
     n: '01',
     title: 'Custom Cabinets',
-    h1: 'Cabinets built to the millimetre,<br>for the room you <em>actually</em> have.',
+    h1: 'Cabinets built to the millimeter,<br>for the room you <em>actually</em> have.',
     kicker: '01 — Cabinetry',
     desc: 'Full-height, semi-custom and fully custom cabinetry for kitchens, baths, pantries and built-ins. Built in our Triad shop, installed by the crew that measured it.',
     metaDesc: 'Custom kitchen, bath and pantry cabinets built in our Triad shop. Plywood boxes, soft-close hardware, painted or stained finishes. Fixed quotes and lifetime installation warranty.',
@@ -355,7 +355,7 @@ const SERVICES = [
     included: [
       ['Plywood boxes', 'Three-quarter-inch plywood, doweled and glued — not particle board with a photo finish.'],
       ['Real hardware', 'Soft-close undermount runners and hinges rated for daily use, not builder-grade imports.'],
-      ['A sample door', 'Finish, sheen and colour approved in your light before we spray the full run.'],
+      ['A sample door', 'Finish, sheen and color approved in your light before we spray the full run.'],
       ['Storage that works', 'Pull-outs, dividers, appliance panels, toe-kick drawers and pantry systems planned around how you cook.'],
       ['Scribed fit', 'Cabinets fitted to your walls and ceilings, then trimmed — not shimmed and buried in caulk.'],
       ['Our own installers', 'The people who measured the room are the people who set the cabinets.'],
@@ -405,7 +405,7 @@ const SERVICES = [
       ['Subfloor prep', 'Flatness checked, soft spots repaired and the substrate primed before install.'],
       ['Levelling &amp; slope', 'Self-leveller where needed, and correct slope in wet areas so water goes to the drain.'],
       ['Waterproofing', 'Membrane in baths, laundry rooms and any floor that sees standing water.'],
-      ['Layout planning', 'Tile centred on the room and planks run with the longest sight line, not wherever the first row lands.'],
+      ['Layout planning', 'Tile centered on the room and planks run with the longest sight line, not wherever the first row lands.'],
       ['Clean transitions', 'Undercut jambs, flush threshold strips and level changes that do not trip you.'],
       ['Our own installers', 'The crew that preps the floor is the crew that finishes and seals it.'],
     ],
@@ -455,7 +455,7 @@ const SERVICES = [
       ['Slab selection', 'You see and approve the actual slab before it is cut.'],
       ['Edge profile', 'Eased, bevel, bullnose, waterfall or mitred — chosen at quote stage.'],
       ['Sink &amp; faucet cut-outs', 'Undermount sinks, cooktops and faucet holes cut and polished in-shop.'],
-      ['Seam planning', 'Seams placed where they read least, colour-matched and finished flush.'],
+      ['Seam planning', 'Seams placed where they read least, color-matched and finished flush.'],
       ['Backsplash', '4" splash, full-height splash or slab splash, matched from the same lot.'],
     ],
     specTitle: 'Quartz options',
@@ -876,7 +876,7 @@ ${phero(d, {
         <h3>Quartz</h3>
         <ul>
           <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Non-porous — no sealing, ever</li>
-          <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Consistent colour and pattern</li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Consistent color and pattern</li>
           <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Best for busy family kitchens</li>
           <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Excellent in baths and laundry</li>
           <li class="cmp__no">Not ideal for outdoor kitchens</li>
@@ -942,7 +942,7 @@ ${ctaBand(d)}
 ${phero(d, {
     kicker: 'About',
     h1: 'A small Triad workshop<br>with <em>one standard</em>: it has to last.',
-    p: 'Quality Stone Counters Corp is family owned and owner-run. Giselle walks every project from the first measurement to the final walkthrough — no call centre, no rotating subcontractors, no surprise line items.',
+    p: 'Quality Stone Counters Corp is family owned and owner-run. Giselle walks every project from the first measurement to the final walkthrough — no call center, no rotating subcontractors, no surprise line items.',
     img: { ...IMG.faucet, cap: 'Detail · quartz &amp; brass' },
     meta: { crumb: trail },
   })}
@@ -956,7 +956,7 @@ ${phero(d, {
       </div>
       <div class="prose">
         <p>We started in the Triad doing what most shops avoid: measuring the actual room, drawing the actual cabinet, and installing it with the same people who sold it. Ten years and more than 300 projects later, that is still the whole business.</p>
-        <p>We template and fabricate in-house, so the counter that arrives at your house was cut for your house. Cabinets are built to the millimetre. Installation is done by the crew that measured it.</p>
+        <p>We template and fabricate in-house, so the counter that arrives at your house was cut for your house. Cabinets are built to the millimeter. Installation is done by the crew that measured it.</p>
         <p>That means we say no to some jobs. It also means the jobs we take get finished properly, on a schedule you can plan around, at the number we quoted.</p>
       </div>
       <dl class="facts facts--wide">
@@ -998,7 +998,7 @@ ${phero(d, {
       <a class="btn btn--line" href="${url(d, 'reviews/')}">Read the reviews <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
     </div>
     <ul class="creds">
-      <li><span class="mono">Licence</span><strong>${S.license}</strong><p>Licensed and insured to work in North Carolina.</p></li>
+      <li><span class="mono">License</span><strong>${S.license}</strong><p>Licensed and insured to work in North Carolina.</p></li>
       <li><span class="mono">Rating</span><strong>${S.rating} / 5</strong><p>Across ${S.reviews} Google reviews from Triad homeowners.</p></li>
       <li><span class="mono">Warranty</span><strong>Lifetime</strong><p>On installation, for as long as you own the home.</p></li>
       <li><span class="mono">Fabrication</span><strong>In-house</strong><p>Template, cut and polish all happen in our own shop.</p></li>
@@ -1634,7 +1634,7 @@ function formMarkup(d, id = 'form') {
       <a class="mono" href="${S.telHref}">Call Giselle <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
     </div>
     <div class="split-cta__a">
-      <span class="mono">Licence</span>
+      <span class="mono">License</span>
       <strong>${S.license}</strong>
       <span class="mono">Licensed · insured · lifetime installation warranty</span>
       <a class="mono" href="${url(d, 'about/')}">About the shop <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
@@ -1667,7 +1667,7 @@ function formMarkup(d, id = 'form') {
     <span class="thanks__ic"><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg></span>
     <span class="mono">Request received</span>
     <h1 class="thanks__h">Got it.<br><em>Giselle will call you.</em></h1>
-    <p>If it is after 5:30, you will hear from us first thing tomorrow. Want it faster? Call us now — the phone is in the office, not a call centre.</p>
+    <p>If it is after 5:30, you will hear from us first thing tomorrow. Want it faster? Call us now — the phone is in the office, not a call center.</p>
     <div class="thanks__acts">
       <a class="btn btn--solid btn--lg" href="${S.telHref}"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg>Call ${S.tel}</a>
       <a class="btn btn--line btn--lg" href="${url(d, 'work/')}">See recent work</a>
