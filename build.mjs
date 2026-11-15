@@ -13,8 +13,6 @@ const S = {
   tel2Href: 'tel:+17869859559',
   email: 'qualitystonecounterscorp@gmail.com',
   license: 'NC #78214',
-  rating: '4.9',
-  reviews: '212',
   hours: 'Mon–Fri 8:00–5:30 · Sat by appointment',
   area: 'Greensboro, Winston-Salem, High Point, Kernersville, Burlington and the surrounding Triad',
   lang: 'Habla Español',
@@ -47,7 +45,6 @@ const NAV = [
   ['Services', 'services/', 'services'],
   ['Work', 'work/', 'work'],
   ['Process', 'process/', 'process'],
-  ['Reviews', 'reviews/', 'reviews'],
   ['FAQ', 'faq/', 'faq'],
 ];
 
@@ -70,7 +67,6 @@ function icons() {
     <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h15M13 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
     <symbol id="i-phone" viewBox="0 0 24 24"><path d="M6.6 10.8a15.1 15.1 0 006.6 6.6l2.2-2.2a1 1 0 011-.25c1.1.37 2.3.57 3.6.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1.02z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></symbol>
     <symbol id="i-check" viewBox="0 0 24 24"><path d="M4 12.5l5 5L20 6.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
-    <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 2.6l2.9 6 6.5.9-4.7 4.5 1.1 6.5L12 17.4l-5.8 3.1 1.1-6.5L2.6 9.5l6.5-.9z" fill="currentColor"/></symbol>
     <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
     <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-6.5-6.2-6.5-11a6.5 6.5 0 0113 0c0 4.8-6.5 11-6.5 11z" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="10" r="2.2" fill="none" stroke="currentColor" stroke-width="1.5"/></symbol>
     <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M3.5 7l8.5 6 8.5-6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></symbol>
@@ -78,10 +74,6 @@ function icons() {
     <symbol id="i-slab" viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="12" rx="1" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M3 10h18M9 10v8" fill="none" stroke="currentColor" stroke-width="1.5"/></symbol>
   </defs>
 </svg>`;
-}
-
-function stars(cls = '') {
-  return `<span class="stars ${cls}" aria-hidden="true">${'<svg class="ico"><use href="#i-star"/></svg>'.repeat(5)}</span>`;
 }
 
 function head(d, { title, desc, canonical, og, jsonld, extra = '', base = '' }) {
@@ -182,7 +174,7 @@ function crumb(d, trail) {
 
 function trustrow(d, extra = []) {
   const items = [
-    `<li><span class="stars" aria-hidden="true"><svg class="ico"><use href="#i-star"/></svg><svg class="ico"><use href="#i-star"/></svg><svg class="ico"><use href="#i-star"/></svg><svg class="ico"><use href="#i-star"/></svg><svg class="ico"><use href="#i-star"/></svg></span><span><strong>${S.rating}</strong> · ${S.reviews} Google reviews</span></li>`,
+    `<li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Lifetime installation warranty</li>`,
     `<li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Licensed &amp; insured · ${S.license}</li>`,
     ...extra,
   ];
@@ -219,7 +211,6 @@ function footer(d) {
     <div class="foot__col">
       <h4 class="mono">Services</h4>
       <a href="${url(d, 'services/custom-cabinets/')}">Custom cabinets</a>
-      <a href="${url(d, 'services/flooring/')}">Tile &amp; LVP flooring</a>
       <a href="${url(d, 'services/quartz-countertops/')}">Quartz countertops</a>
       <a href="${url(d, 'services/granite-countertops/')}">Granite countertops</a>
       <a href="${url(d, 'services/kitchen-remodeling/')}">Kitchen remodels</a>
@@ -230,7 +221,6 @@ function footer(d) {
       <a href="${url(d, 'about/')}">About</a>
       <a href="${url(d, 'process/')}">Process</a>
       <a href="${url(d, 'work/')}">Selected work</a>
-      <a href="${url(d, 'reviews/')}">Reviews</a>
       <a href="${url(d, 'faq/')}">FAQ</a>
     </div>
     <div class="foot__col">
@@ -319,7 +309,6 @@ const biz = (extra = {}) => ({
   address: { '@type': 'PostalAddress', addressLocality: 'Greensboro', addressRegion: 'NC', addressCountry: 'US' },
   areaServed: ['Greensboro', 'Winston-Salem', 'High Point', 'Kernersville', 'Burlington', 'Clemmons', 'Thomasville', 'Oak Ridge', 'Summerfield', 'Triad NC'],
   openingHoursSpecification: [{ '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'], opens: '08:00', closes: '17:30' }],
-  aggregateRating: { '@type': 'AggregateRating', ratingValue: S.rating, reviewCount: S.reviews },
   ...extra,
 });
 
@@ -388,60 +377,11 @@ const SERVICES = [
     related: ['quartz-countertops', 'kitchen-remodeling', 'bathroom-remodeling'],
   },
   {
-    slug: 'flooring',
-    n: '02',
-    title: 'Tile and LVP Flooring',
-    h1: 'Floors that are flat, level<br>and <em>built to stay</em> that way.',
-    kicker: '02 — Floors',
-    desc: 'Porcelain tile and luxury vinyl plank for kitchens, baths, laundry rooms and whole floors. Subfloor prep, level transitions and installation by our own crew.',
-    metaDesc: 'Tile and LVP flooring in Greensboro, Winston-Salem and the Triad. Subfloor levelling, waterproof tile, clean transitions and installation by one owner-led crew.',
-    img: { ...IMG.bathTub, cap: 'Winston-Salem · hex tile floor' },
-    intro: [
-      'A floor is only as good as what is under it. We check flatness, repair soft spots, prime and level before a single tile or plank goes down — because lippage and hollow spots are installation problems, not material problems.',
-      'Tile is set over an uncoupling or waterproof membrane with the correct notch trowel and full coverage. LVP is acclimated, undercut at the walls and laid on a prepared substrate, so the planks lock tight and the transitions sit flush.',
-    ],
-    includedTitle: 'What a Quality Stone floor project includes',
-    included: [
-      ['Subfloor prep', 'Flatness checked, soft spots repaired and the substrate primed before install.'],
-      ['Levelling &amp; slope', 'Self-leveller where needed, and correct slope in wet areas so water goes to the drain.'],
-      ['Waterproofing', 'Membrane in baths, laundry rooms and any floor that sees standing water.'],
-      ['Layout planning', 'Tile centered on the room and planks run with the longest sight line, not wherever the first row lands.'],
-      ['Clean transitions', 'Undercut jambs, flush threshold strips and level changes that do not trip you.'],
-      ['Our own installers', 'The crew that preps the floor is the crew that finishes and seals it.'],
-    ],
-    specTitle: 'Flooring options',
-    specHead: ['Choice', 'Options'],
-    specRows: [
-      ['Tile', 'Porcelain or ceramic, 12x24, 24x48, hex, mosaic'],
-      ['LVP / LVT', 'Glue-down or click, 20 mil wear layer and up'],
-      ['Layout', 'Stacked, offset, herringbone, chevron'],
-      ['Transitions', 'Flush strips, reducers, stair nosing'],
-      ['Lead time', '3–7 days for most rooms'],
-      ['Warranty', 'Lifetime on installation'],
-    ],
-    price: { range: '$6–$18', unit: 'per square foot, installed', note: 'Tile with membrane and levelling sits at the top; click LVP over a sound subfloor sits at the bottom. Prep is quoted up front, not discovered later.' },
-    timeline: '3–7 days',
-    steps: [
-      ['Check', 'We measure, test flatness and look for movement or moisture issues.'],
-      ['Plan', 'Layout, material and transitions agreed, with a fixed quote.'],
-      ['Prep', 'Repairs, levelling, membrane and primer before any finish material.'],
-      ['Lay &amp; finish', 'Tile or plank set, grouted or locked, trimmed and cleaned.'],
-    ],
-    gallery: [IMG.bathTub, IMG.bathMarble, IMG.kitchen],
-    faqs: [
-      ['Do you level the subfloor first?', 'Yes, and it is in the quote. Tile and plank both telegraph what is underneath, so flatness, soft spots and moisture get fixed before installation starts.'],
-      ['Tile or LVP — which should I choose?', 'Tile is the better answer for baths, laundry rooms and anywhere wet. LVP is warmer underfoot, faster to install and often the right call for a whole main floor or a rental.'],
-      ['Can you lay tile over existing tile?', 'Sometimes, if the existing floor is sound, flat and well bonded. We test it first; if there is any doubt we remove it, because a failed bond takes the new floor with it.'],
-      ['Do you do small jobs like a bathroom floor?', 'Yes. A single bath floor, a laundry room or a repaired patch is a normal job for us, and it is usually scheduled alongside a vanity or cabinet project.'],
-    ],
-    related: ['bathroom-remodeling', 'kitchen-remodeling', 'custom-cabinets'],
-  },
-  {
     slug: 'quartz-countertops',
-    n: '03',
+    n: '02',
     title: 'Quartz Countertops',
     h1: 'Quartz countertops, templated digitally<br>and cut in <em>our own shop.</em>',
-    kicker: '03 — Engineered stone',
+    kicker: '02 — Engineered stone',
     desc: 'Non-porous quartz for kitchens, baths, laundry rooms and bars. Laser template, in-house fabrication, tight seams and a lifetime installation warranty.',
     metaDesc: 'Quartz countertops in Greensboro, Winston-Salem and the Triad. Digital templating, in-house fabrication, undermount sinks and tight seams. Fixed quotes, lifetime installation warranty.',
     img: { ...IMG.waterfall, cap: 'Winston-Salem · quartz waterfall island' },
@@ -487,10 +427,10 @@ const SERVICES = [
   },
   {
     slug: 'granite-countertops',
-    n: '04',
+    n: '03',
     title: 'Granite Countertops',
     h1: 'Granite slabs chosen with you,<br>before anything is <em>cut.</em>',
-    kicker: '04 — Natural stone',
+    kicker: '03 — Natural stone',
     desc: 'Natural granite with real movement, cut and finished in-house. Slab selection, sealing and installation handled by one crew.',
     metaDesc: 'Granite countertops in the Triad. Slab selection with the owner, in-house fabrication, sealing and installation. Fixed quotes and lifetime installation warranty.',
     img: { ...IMG.island, cap: 'Greensboro · granite & brick' },
@@ -536,10 +476,10 @@ const SERVICES = [
   },
   {
     slug: 'kitchen-remodeling',
-    n: '05',
+    n: '04',
     title: 'Kitchen Remodeling',
     h1: 'One crew, one schedule,<br>one <em>fixed quote</em> for the whole kitchen.',
-    kicker: '05 — Full kitchens',
+    kicker: '04 — Full kitchens',
     desc: 'Layout, cabinets, stone, lighting and installation handled as one project, with one schedule and one point of contact.',
     metaDesc: 'Full kitchen remodeling in Greensboro, Winston-Salem and the Triad. Cabinets, quartz and granite, layout and installation by one owner-led crew. Fixed quotes.',
     img: { ...IMG.kitchen, cap: 'Greensboro · full kitchen' },
@@ -585,10 +525,10 @@ const SERVICES = [
   },
   {
     slug: 'bathroom-remodeling',
-    n: '06',
+    n: '05',
     title: 'Bathroom Remodeling',
     h1: 'Bathrooms finished on time, on budget,<br>and <em>sealed properly.</em>',
-    kicker: '06 — Baths &amp; vanities',
+    kicker: '05 — Baths &amp; vanities',
     desc: 'Vanities, stone tops, shower slabs and full bathroom remodels. Waterproofing done right, because a beautiful bath that leaks is not beautiful.',
     metaDesc: 'Bathroom remodeling and custom vanities in the Triad. Quartz and marble vanity tops, slab showers, waterproofing and installation by one crew.',
     img: { ...IMG.bathTub, cap: 'Winston-Salem · marble bath' },
@@ -826,8 +766,8 @@ ${ctaBand(d, { h: `Ready to price your<br><em>${s.title.toLowerCase()}?</em>`, p
   const body = `
 ${phero(d, {
     kicker: 'Services',
-    h1: 'Six things,<br><em>done properly.</em>',
-    p: 'Cabinets, floors, quartz, granite, kitchens and baths. We keep the list short so the quality stays high — and every job includes design help, a fixed quote and installation by our own crew.',
+    h1: 'Five things,<br><em>done properly.</em>',
+    p: 'Cabinets, quartz, granite, kitchens and baths. We keep the list short so the quality stays high — and every job includes design help, a fixed quote and installation by our own crew.',
     img: { ...IMG.waterfall, cap: 'Winston-Salem · quartz waterfall' },
     meta: { crumb: trail },
   })}
@@ -853,7 +793,7 @@ ${phero(d, {
       </a>`).join('\n      ')}
       <a class="svcgrid__card svcgrid__card--ask" href="${url(d, 'contact/')}">
         <div class="svcgrid__body">
-          <span class="mono">07 — Not sure yet</span>
+          <span class="mono">06 — Not sure yet</span>
           <h3>Start with the room, not the product.</h3>
           <p>Tell us what the space looks like and how you actually use it. We will tell you what it needs — even when that is less than you expected.</p>
           <span class="svcgrid__meta mono">Free in-home measure · no obligation</span>
@@ -920,8 +860,8 @@ ${ctaBand(d)}
   const out = path.join(ROOT, 'services', 'index.html');
   fs.mkdirSync(path.dirname(out), { recursive: true });
   fs.writeFileSync(out, page(d, {
-    title: `Cabinet, Flooring &amp; Countertop Services in the Triad | ${S.name}`,
-    desc: 'Custom cabinets, tile and LVP flooring, quartz and granite countertops, kitchen and bathroom remodeling across Greensboro, Winston-Salem and the Triad. Fixed quotes, in-house fabrication.',
+    title: `Cabinet &amp; Countertop Services in the Triad | ${S.name}`,
+    desc: 'Custom cabinets, quartz and granite countertops, kitchen and bathroom remodeling across Greensboro, Winston-Salem and the Triad. Fixed quotes, in-house fabrication.',
     canonical: 'services/',
     og: IMG.waterfall.f,
     jsonld,
@@ -962,7 +902,7 @@ ${phero(d, {
       <dl class="facts facts--wide">
         <div><dt class="mono">Projects completed</dt><dd><span data-count="300">0</span>+</dd></div>
         <div><dt class="mono">Years in the Triad</dt><dd><span data-count="10">0</span></dd></div>
-        <div><dt class="mono">Google rating</dt><dd>${S.rating}</dd></div>
+        <div><dt class="mono">In-house fabrication</dt><dd>Yes</dd></div>
         <div><dt class="mono">Install warranty</dt><dd>Lifetime</dd></div>
       </dl>
     </div>
@@ -990,16 +930,12 @@ ${phero(d, {
 
 <section class="sec">
   <div class="shell">
-    <div class="sechead sechead--split sechead--end">
-      <div>
-        <span class="sechead__num mono">03 — Credentials</span>
-        <h2 class="h2">You should<br><em>check these.</em></h2>
-      </div>
-      <a class="btn btn--line" href="${url(d, 'reviews/')}">Read the reviews <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    <div class="sechead">
+      <span class="sechead__num mono">03 — Credentials</span>
+      <h2 class="h2">You should<br><em>check these.</em></h2>
     </div>
     <ul class="creds">
       <li><span class="mono">License</span><strong>${S.license}</strong><p>Licensed and insured to work in North Carolina.</p></li>
-      <li><span class="mono">Rating</span><strong>${S.rating} / 5</strong><p>Across ${S.reviews} Google reviews from Triad homeowners.</p></li>
       <li><span class="mono">Warranty</span><strong>Lifetime</strong><p>On installation, for as long as you own the home.</p></li>
       <li><span class="mono">Fabrication</span><strong>In-house</strong><p>Template, cut and polish all happen in our own shop.</p></li>
     </ul>
@@ -1265,104 +1201,6 @@ ${ctaBand(d, { h: 'Book the first step.<br><em>It is free.</em>', p: 'In-home me
 }
 
 /* ------------------------------------------------------------------ */
-/* reviews                                                             */
-/* ------------------------------------------------------------------ */
-
-{
-  const d = 1;
-  const trail = [['Reviews', 'reviews/']];
-  const reviews = [
-    ['Maria G.', 'Greensboro · kitchen remodel', 'Giselle walked us through every option and the cabinets fit perfectly. Clean install, clear communication, and the quartz seams are invisible.'],
-    ['Kevin R.', 'Winston-Salem · quartz counters', 'Our countertops look incredible and the crew left the house spotless. Professional from start to finish.'],
-    ['Aisha T.', 'High Point · bathroom', 'Bathroom finished on time and on budget. They made a stressful project easy.'],
-    ['Dana W.', 'Kernersville · kitchen', 'We had three quotes. Quality Stone was the only one that explained where the seams would go before we signed. That told us everything.'],
-    ['Marcus L.', 'Burlington · granite', 'They let us walk the slab yard and mark the section we wanted. The island looks like a piece of art.'],
-    ['Priya S.', 'Greensboro · vanity', 'Small job, treated like a big one. New vanity top templated and installed in a week.'],
-    ['Tom &amp; Ellen H.', 'Winston-Salem · full kitchen', 'Demo to final clean-up in six weeks, exactly as scheduled. The daily updates were the best part.'],
-    ['Renee C.', 'Clemmons · bath', 'Our old shower had been leaking for years. They found it, fixed it properly and rebuilt the whole thing.'],
-    ['James O.', 'High Point · cabinets', 'Matched our existing cabinets for a pantry addition. You genuinely cannot tell which is new.'],
-  ];
-  const jsonld = {
-    '@context': 'https://schema.org',
-    '@graph': [biz(), crumbs(trail), {
-      '@type': 'ItemList',
-      itemListElement: reviews.map(([name, where, text], i) => ({
-        '@type': 'ListItem',
-        position: i + 1,
-        item: {
-          '@type': 'Review',
-          author: { '@type': 'Person', name: name.replace(/&amp;/g, '&') },
-          reviewBody: text,
-          reviewRating: { '@type': 'Rating', ratingValue: 5, bestRating: 5 },
-          itemReviewed: { '@id': `${ORIGIN}/#business` },
-        },
-      })),
-    }],
-  };
-  const body = `
-${phero(d, {
-    kicker: 'Reviews',
-    h1: 'What the Triad<br><em>actually says.</em>',
-    p: `${S.rating} out of 5 across ${S.reviews} Google reviews. No incentives, no filtered list — this is what people wrote after we left.`,
-    img: { ...IMG.bathMarble, cap: 'High Point · vanity &amp; marble' },
-    meta: { crumb: trail },
-  })}
-
-<section class="sec">
-  <div class="shell">
-    <div class="score">
-      <div class="score__big">
-        <span class="score__num">${S.rating}</span>
-        ${stars('stars--lg')}
-        <span class="mono">${S.reviews} Google reviews</span>
-      </div>
-      <div class="score__bars">
-        <div class="score__bar"><span class="mono">5</span><span class="score__track"><span style="width:94%"></span></span><span class="mono">94%</span></div>
-        <div class="score__bar"><span class="mono">4</span><span class="score__track"><span style="width:4%"></span></span><span class="mono">4%</span></div>
-        <div class="score__bar"><span class="mono">3</span><span class="score__track"><span style="width:1%"></span></span><span class="mono">1%</span></div>
-        <div class="score__bar"><span class="mono">2</span><span class="score__track"><span style="width:0.5%"></span></span><span class="mono">&lt;1%</span></div>
-        <div class="score__bar"><span class="mono">1</span><span class="score__track"><span style="width:0.5%"></span></span><span class="mono">&lt;1%</span></div>
-      </div>
-      <div class="score__cta">
-        <p>Had a project with us? A review helps the next homeowner find a shop that answers its phone.</p>
-        <a class="btn btn--solid" href="${url(d, 'contact/')}">Start your project <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="sec sec--tint">
-  <div class="shell">
-    <div class="sechead">
-      <span class="sechead__num mono">In their words</span>
-      <h2 class="h2">Nine reviews,<br><em>unedited.</em></h2>
-    </div>
-    <div class="revgrid">
-      ${reviews.map(([name, where, text]) => `<blockquote class="revcard">
-        ${stars()}
-        <p>“${text}”</p>
-        <footer class="mono">${name} · ${where}</footer>
-      </blockquote>`).join('\n      ')}
-    </div>
-  </div>
-</section>
-
-${ctaBand(d, { h: 'Join ' + S.reviews + ' happy<br><em>Triad homeowners.</em>', p: 'Free in-home measure, fixed quote, and an install date you can plan around.' })}
-`;
-  const out = path.join(ROOT, 'reviews', 'index.html');
-  fs.mkdirSync(path.dirname(out), { recursive: true });
-  fs.writeFileSync(out, page(d, {
-    title: `Reviews — 4.9 Stars from 212 Triad Homeowners | ${S.name}`,
-    desc: 'Read what homeowners in Greensboro, Winston-Salem and the Triad say about Quality Stone Counters Corp. 4.9 out of 5 across 212 Google reviews.',
-    canonical: 'reviews/',
-    og: IMG.bathMarble.f,
-    jsonld,
-    active: 'reviews',
-  }, body));
-  console.log('wrote', path.relative(ROOT, out));
-}
-
-/* ------------------------------------------------------------------ */
 /* faq                                                                 */
 /* ------------------------------------------------------------------ */
 
@@ -1395,7 +1233,7 @@ ${ctaBand(d, { h: 'Join ' + S.reviews + ' happy<br><em>Triad homeowners.</em>', 
       ['What does the warranty cover?', 'Installation, for as long as you own the home. If a seam lifts or a cabinet settles, we come back and fix it.'],
       ['Are you licensed and insured?', `Yes. ${S.license}, and we carry insurance for the work we do in your home.`],
       ['What if something is wrong after you leave?', 'Call us. We come back. That is the entire policy, and it is written on your paperwork.'],
-      ['Can I see reviews before I book?', `Yes — ${S.rating} out of 5 across ${S.reviews} Google reviews. We will also give you references in your part of the Triad.`],
+      ['Can I see past work before I book?', 'Yes. We will show you completed projects in your part of the Triad, and you are welcome to visit the shop and see the cabinets and stone before you commit.'],
     ]],
     ['Service area', 'area', [
       ['What areas do you serve?', `${S.area} communities in North Carolina.`],
@@ -1714,7 +1552,6 @@ function formMarkup(d, id = 'form') {
       <a href="${url(d, 'services/')}">Services</a>
       <a href="${url(d, 'work/')}">Work</a>
       <a href="${url(d, 'process/')}">Process</a>
-      <a href="${url(d, 'reviews/')}">Reviews</a>
       <a href="${url(d, 'faq/')}">FAQ</a>
       <a href="${S.telHref}">${S.tel}</a>
     </nav>
@@ -1724,7 +1561,7 @@ function formMarkup(d, id = 'form') {
   const out = path.join(ROOT, '404.html');
   fs.writeFileSync(out, page(d, {
     title: `Page Not Found | ${S.name}`,
-    desc: 'That page could not be found. Browse services, work, reviews or contact Quality Stone Counters for a free estimate.',
+    desc: 'That page could not be found. Browse services, work, process or contact Quality Stone Counters for a free estimate.',
     canonical: '404.html',
     og: IMG.kitchen.f,
     jsonld,
@@ -1744,7 +1581,6 @@ const ROUTES = [
   ...SERVICES.map((s) => [`services/${s.slug}/`, '0.85', 'monthly']),
   ['contact/', '0.9', 'yearly'],
   ['work/', '0.75', 'monthly'],
-  ['reviews/', '0.75', 'monthly'],
   ['process/', '0.7', 'yearly'],
   ['about/', '0.7', 'yearly'],
   ['faq/', '0.7', 'monthly'],
@@ -1764,7 +1600,7 @@ ${ROUTES.map(([p, priority, freq]) => `  <url>
 fs.writeFileSync(path.join(ROOT, 'sitemap.xml'), sitemap);
 
 const llms = `# ${S.name}
-Custom cabinets, tile and LVP flooring, quartz and granite countertops, kitchen and bathroom remodels across the Triad, North Carolina. Owner-led, fixed quotes, in-house fabrication, lifetime installation warranty.
+Custom cabinets, quartz and granite countertops, kitchen and bathroom remodels across the Triad, North Carolina. Owner-led, fixed quotes, in-house fabrication, lifetime installation warranty.
 
 ## Pages
 - Home: ${ORIGIN}/
@@ -1772,7 +1608,6 @@ Custom cabinets, tile and LVP flooring, quartz and granite countertops, kitchen 
 ${SERVICES.map((s) => `- ${s.title}: ${ORIGIN}/services/${s.slug}/`).join('\n')}
 - Selected work: ${ORIGIN}/work/
 - Process: ${ORIGIN}/process/
-- Reviews: ${ORIGIN}/reviews/
 - FAQ: ${ORIGIN}/faq/
 - Service area: ${ORIGIN}/service-area/
 - About: ${ORIGIN}/about/
@@ -1781,7 +1616,7 @@ ${SERVICES.map((s) => `- ${s.title}: ${ORIGIN}/services/${s.slug}/`).join('\n')}
 ## Facts
 Owner: Giselle. Phone: (336) 844-0585 or (786) 985-9559. Email: ${S.email}
 Service area: Greensboro, Winston-Salem, High Point, Kernersville, Burlington, Clemmons, Thomasville, Oak Ridge, Summerfield, Triad NC.
-Rating: ${S.rating}/5 across ${S.reviews} Google reviews. Licensed and insured ${S.license}. Lifetime installation warranty.
+Licensed and insured ${S.license}. Lifetime installation warranty.
 Hours: Mon-Fri 8:00-5:30, Saturday by appointment.
 
 ## Process
